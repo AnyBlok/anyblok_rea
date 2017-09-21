@@ -18,4 +18,4 @@ class TestAgent(DBTestCase):
         registry = self.init_registry(None)
         registry.upgrade(install=('rea_test_1',))
         customer = registry.Agent.Customer.insert(name="My customer")
-        self.assertId(customer, registry.Entity.query().one())
+        self.assertIs(customer, registry.Entity.query().one())
