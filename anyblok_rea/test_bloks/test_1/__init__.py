@@ -8,28 +8,18 @@
 # v. 2.0. If a copy of the MPL was not distributed with this file,You can
 # obtain one at http://mozilla.org/MPL/2.0/.
 from anyblok.blok import Blok
-from anyblok_rea.release import version
-from logging import getLogger
-logger = getLogger(__name__)
 
 
-class REABlok(Blok):
-    """ Base entity REA blok """
-    version = version
-    author = 'ANDRE Simon'
+class TestBlok1(Blok):
 
-    required = [
-        'anyblok-core',
-    ]
+    version = '0.1.0'
+    required = ['anyblok-core', 'rea']
 
     @classmethod
     def import_declaration_module(cls):
-        from . import entity  # noqa
-        from . import utility  # noqa
+        from . import customer  # noqa
 
     @classmethod
     def reload_declaration_module(cls, reload):
-        from . import entity
-        reload(entity)
-        from . import utility
-        reload(utility)
+        from . import customer
+        reload(customer)
