@@ -24,8 +24,9 @@ class REABlok(Blok):
 
     @classmethod
     def import_declaration_module(cls):
-        pass
+        from . import entity
 
     @classmethod
     def reload_declaration_module(cls, reload):
-        pass
+        from . import entity
+        reload(entity)

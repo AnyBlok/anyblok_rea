@@ -9,20 +9,31 @@
 API doc
 ~~~~~~~
 
-TODO
+**Base entity**
 
-.. **Core**
-.. 
-.. .. automodule:: anyblok.bloks.anyblok_core.core.base
-.. 
-.. .. autoanyblok-declaration:: Base                                                     
-..     :members:                                                                   
-..     :show-inheritance:
-..     :noindex:
-.. 
-.. .. automodule:: anyblok.bloks.anyblok_core.core.sqlbase
-.. 
-.. .. autoclass:: SqlMixin                                                     
-..     :members:                                                                   
-..     :show-inheritance:
-..     :noindex:
+.. automodule:: anyblok_rea.rea.entity
+
+.. autoanyblok-declaration:: Entity
+    :members:
+    :show-inheritance:
+    :noindex:
+
+.. autoanyblok-declaration:: Ressource
+    :members:
+    :show-inheritance:
+    :noindex:
+
+.. autoanyblok-declaration:: Agent
+    :members:
+    :show-inheritance:
+    :noindex:
+
+.. autoanyblok-declaration:: IncrementEvent
+    :members:
+    :show-inheritance:
+    :noindex:
+
+.. autoanyblok-declaration:: DecrementEvent
+    :members:
+    :show-inheritance:
+    :noindex:
