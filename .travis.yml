@@ -32,6 +32,9 @@ env:
 
 script:
   - flake8 anyblok
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - nosetests anyblok_rea/tests -v -s --with-coverage --cover-package=anyblok_rea
+  - psql -c 'drop database travis_ci_test;' -U postgres
   - anyblok_createdb --install-all-bloks
   - nosetests anyblok_rea --with-anyblok-bloks -v -s --with-coverage --cover-package=anyblok_rea
   
