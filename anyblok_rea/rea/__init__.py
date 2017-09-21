@@ -14,6 +14,7 @@ logger = getLogger(__name__)
 
 
 class REABlok(Blok):
+    """ Base entity REA blok """
     version = version
     author = 'ANDRE Simon'
 
