@@ -16,7 +16,7 @@ Agent = Declarations.Model.Agent
 
 
 @register(Agent)
-class Customer:
+class Customer(Agent):
     id = Integer(primary_key=True,
                  foreign_key=Agent.use('id').options(ondelete='cascade'))
-    name = String(nullage=False)
+    name = String(nullable=False)
