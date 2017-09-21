@@ -11,6 +11,7 @@ Welcome to AnyBlok / REA's documentation!
    :caption: Contents:
 
    FRONT.rst
+   REA.rst
    CHANGES.rst
    LICENSE.rst
 
