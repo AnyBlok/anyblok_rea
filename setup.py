@@ -9,25 +9,26 @@
 # obtain one at http://mozilla.org/MPL/2.0/.
 import os
 from setuptools import setup, find_packages
-version = '0.0.1'
+from .anyblok_rea.release import version
+version = version
 
 requires = [
     'anyblok',
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
-# with open(os.path.join(here, 'README.rst'), 'r', encoding='utf-8') as readme:
-#     README = readme.read()
-#
-# with open(
-#     os.path.join(here, 'doc', 'CHANGES.rst'), 'r', encoding='utf-8'
-# ) as change:
-#     CHANGE = change.read()
-#
-# with open(
-#     os.path.join(here, 'doc', 'FRONT.rst'), 'r', encoding='utf-8'
-# ) as front:
-#     FRONT = front.read()
+with open(os.path.join(here, 'README.rst'), 'r', encoding='utf-8') as readme:
+    README = readme.read()
+
+with open(
+    os.path.join(here, 'doc', 'CHANGES.rst'), 'r', encoding='utf-8'
+) as change:
+    CHANGE = change.read()
+
+with open(
+    os.path.join(here, 'doc', 'FRONT.rst'), 'r', encoding='utf-8'
+) as front:
+    FRONT = front.read()
 
 setup(
     name="anyblok_rea",
@@ -36,7 +37,7 @@ setup(
     author_email="sandre@anybox.fr",
     description="REA for AnyBlok",
     license="MPL2",
-    # long_description=README + '\n' + FRONT + '\n' + CHANGE,
+    long_description=README + '\n' + FRONT + '\n' + CHANGE,
     url="http://rea.anyblok.org/%s" % version,
     packages=find_packages(),
     zip_safe=False,
