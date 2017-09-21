@@ -12,6 +12,7 @@ Welcome to AnyBlok / REA's documentation!
 
    FRONT.rst
    REA.rst
+   BLOKS.rst
    CHANGES.rst
    LICENSE.rst
 
