@@ -9,8 +9,7 @@
 # obtain one at http://mozilla.org/MPL/2.0/.
 import os
 from setuptools import setup, find_packages
-from .anyblok_rea.release import version
-version = version
+version = '0.0.1'
 
 requires = [
     'anyblok',
