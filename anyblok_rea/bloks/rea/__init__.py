@@ -24,11 +24,14 @@ class REABlok(Blok):
 
     @classmethod
     def import_declaration_module(cls):
+        from . import exceptions  # noqa
         from . import entity  # noqa
         from . import utility  # noqa
 
     @classmethod
     def reload_declaration_module(cls, reload):
+        from . import exceptions
+        reload(exceptions)
         from . import entity
         reload(entity)
         from . import utility
