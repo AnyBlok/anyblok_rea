@@ -19,7 +19,7 @@ API doc
     :show-inheritance:
     :noindex:
 
-.. autoanyblok-declaration:: Ressource
+.. autoanyblok-declaration:: Resource
     :members:
     :show-inheritance:
     :noindex:
