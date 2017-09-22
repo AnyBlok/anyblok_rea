@@ -21,8 +21,8 @@ Blok rea
     :show-inheritance:
     :noindex:
 
-.. include:: ../anyblok_rea/rea/README.rst
-.. include:: ../anyblok_rea/rea/CODE.rst
+.. include:: ../anyblok_rea/bloks/rea/README.rst
+.. include:: ../anyblok_rea/bloks/rea/CODE.rst
 
 Blok rea commitment
 -------------------
@@ -34,5 +34,5 @@ Blok rea commitment
     :show-inheritance:
     :noindex:
 
-.. include:: ../anyblok_rea/rea_commitment/README.rst
-.. include:: ../anyblok_rea/rea_commitment/CODE.rst
+.. include:: ../anyblok_rea/bloks/rea_commitment/README.rst
+.. include:: ../anyblok_rea/bloks/rea_commitment/CODE.rst
