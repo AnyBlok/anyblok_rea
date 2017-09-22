@@ -64,14 +64,13 @@ class Contract:
             contract=self, resource=resource, recipient=recipient, value=value)
 
 
-@register(Model)
+@register(Model.REA)
 class IncrementCommitment:
     contract = Many2One(label="Contract", model=Model.REA.Contract,
                         one2many='commitments_increment_ids', nullable=True)
 
 
-@register(Model)
+@register(Model.REA)
 class DecrementCommitment:
     contract = Many2One(label="Contract", model=Model.REA.Contract,
-                        enable_typechecks=False,
                         one2many='commitments_decrement_ids', nullable=True)
