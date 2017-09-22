@@ -59,6 +59,7 @@ setup(
         'bloks': [
             'rea=anyblok_rea.bloks.rea:REABlok',
             'rea-commitment=anyblok_rea.bloks.rea_commitment:REACommitmentBlok',
+            'rea-contract=anyblok_rea.bloks.rea_contract:REAContractBlok',
         ],
         'test_bloks': [
             'rea_test_1=anyblok_rea.test_bloks.test_1:TestBlok1',
