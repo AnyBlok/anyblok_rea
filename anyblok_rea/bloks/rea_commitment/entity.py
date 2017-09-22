@@ -29,7 +29,7 @@ class IncrementCommitment(Model.REA.Entity):
     # ISBN-10 3-540-30154-2 Springer Berlin Heidelberg New York
     # ISBN-13 978-3-540-30154-7 Springer Berlin Heidelberg New York
     """
-    id = Integer(primary_key=True, foreign_key=Model.Entity.use('id'))
+    id = Integer(primary_key=True, foreign_key=Model.REA.Entity.use('id'))
 
     provider = Many2One(label="Agent provider", model=Model.REA.Agent, nullable=False)
 
@@ -62,7 +62,7 @@ class DecrementCommitment(Model.REA.Entity):
     # ISBN-10 3-540-30154-2 Springer Berlin Heidelberg New York
     # ISBN-13 978-3-540-30154-7 Springer Berlin Heidelberg New York
     """
-    id = Integer(primary_key=True, foreign_key=Model.Entity.use('id'))
+    id = Integer(primary_key=True, foreign_key=Model.REA.Entity.use('id'))
 
     recipient = Many2One(label="Agent recipient", model=Model.REA.Agent, nullable=False)
 
