@@ -10,12 +10,12 @@
 from anyblok.blok import Blok
 
 
-class REAContractBlok(Blok):
-    """ Contract pattern REA blok """
+class REAGroupBlok(Blok):
+    """ Group pattern REA blok """
     version = '0.0.1'
 
     required = [
-        'rea-commitment',
+        'rea',
     ]
 
     @classmethod
