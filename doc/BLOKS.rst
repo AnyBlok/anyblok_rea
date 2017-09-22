@@ -23,3 +23,5 @@ Blok rea
 
 .. include:: ../anyblok_rea/rea/README.rst
 .. include:: ../anyblok_rea/rea/CODE.rst
+.. include:: ../anyblok_rea/rea_commitment/README.rst
+.. include:: ../anyblok_rea/rea_commitment/CODE.rst
