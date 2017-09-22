@@ -58,6 +58,7 @@ setup(
     entry_points={
         'bloks': [
             'rea=anyblok_rea.bloks.rea:REABlok',
+            'rea=anyblok_rea.bloks.rea:REACommitmentBlok',
         ],
         'test_bloks': [
             'rea_test_1=anyblok_rea.test_bloks.test_1:TestBlok1',
