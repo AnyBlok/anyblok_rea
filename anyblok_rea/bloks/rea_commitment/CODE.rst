@@ -12,7 +12,7 @@ API doc
 
 **Commitment entity**
 
-.. automodule:: anyblok_rea.rea.entity
+.. automodule:: anyblok_rea.bloks.rea.entity
 
 .. autoanyblok-declaration:: IncrementCommitment
     :members:
@@ -34,14 +34,14 @@ API doc
     :show-inheritance:
     :noindex:
 
-.. automodule:: anyblok_rea.rea.utility
+.. automodule:: anyblok_rea.bloks.rea.utility
 
 .. autoanyblok-declaration:: Utility
     :members:
     :show-inheritance:
     :noindex:
 
-.. automodule:: anyblok_rea.rea.exceptions
+.. automodule:: anyblok_rea.bloks.rea.exceptions
 
 .. autoanyblok-declaration:: FulfillmentException
     :members:
