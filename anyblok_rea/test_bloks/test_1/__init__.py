@@ -18,8 +18,11 @@ class TestBlok1(Blok):
     @classmethod
     def import_declaration_module(cls):
         from . import customer  # noqa
+        from . import pizza  # noqa
 
     @classmethod
     def reload_declaration_module(cls, reload):
         from . import customer
         reload(customer)
+        from . import pizza
+        reload(pizza)
