@@ -12,11 +12,11 @@ from anyblok.column import Integer, String
 
 
 register = Declarations.register
-Agent = Declarations.Model.Agent
-Resource = Declarations.Model.Resource
+Model = Declarations.Model
+Resource = Model.REA.Resource
 
 
-@register(Resource)
+@register(Model)
 class Pizza(Resource):
     id = Integer(primary_key=True,
                  foreign_key=Resource.use('id').options(ondelete='cascade'))

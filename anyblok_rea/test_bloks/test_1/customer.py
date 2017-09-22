@@ -12,10 +12,11 @@ from anyblok.column import Integer, String
 
 
 register = Declarations.register
-Agent = Declarations.Model.Agent
+Model = Declarations.Model
+Agent = Model.REA.Agent
 
 
-@register(Agent)
+@register(Model)
 class Customer(Agent):
     id = Integer(primary_key=True,
                  foreign_key=Agent.use('id').options(ondelete='cascade'))

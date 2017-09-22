@@ -20,6 +20,11 @@ Mixin = Declarations.Mixin
 
 
 @register(Model)
+class REA:
+    pass
+
+
+@register(Model.REA)
 class Entity:
 
     id = Integer(primary_key=True)
@@ -29,7 +34,7 @@ class Entity:
     @classmethod
     def define_mapper_args(cls):
         mapper_args = super(Entity, cls).define_mapper_args()
-        if cls.__registry_name__ == Model.Entity.__registry_name__:
+        if cls.__registry_name__ == Model.REA.Entity.__registry_name__:
             mapper_args.update({
                 'polymorphic_identity': cls.__registry_name__,
                 'polymorphic_on': cls.entity_type,
@@ -41,8 +46,8 @@ class Entity:
         return mapper_args
 
 
-@register(Model)
-class Resource(Model.Entity):
+@register(Model.REA)
+class Resource(Model.REA.Entity):
     """
     Economic Resource is a thing that is scarce, and has utility for
     economic agents, and is something users of business applications
@@ -62,11 +67,11 @@ class Resource(Model.Entity):
     # ISBN-13 978-3-540-30154-7 Springer Berlin Heidelberg New York
     """
 
-    id = Integer(primary_key=True, foreign_key=Model.Entity.use('id'))
+    id = Integer(primary_key=True, foreign_key=Model.REA.Entity.use('id'))
 
 
-@register(Model)
-class Agent(Model.Entity):
+@register(Model.REA)
+class Agent(Model.REA.Entity):
     """
     Economic Agent is an individual or organization capable of having
     control over economic resources, and transferring or receiving the control
@@ -80,11 +85,11 @@ class Agent(Model.Entity):
     # ISBN-13 978-3-540-30154-7 Springer Berlin Heidelberg New York
     """
 
-    id = Integer(primary_key=True, foreign_key=Model.Entity.use('id'))
+    id = Integer(primary_key=True, foreign_key=Model.REA.Entity.use('id'))
 
 
-@register(Model)
-class IncrementEvent(Model.Entity):
+@register(Model.REA)
+class IncrementEvent(Model.REA.Entity):
     """
     Economic Event represents either an increment or a decrement in the
     value of economic resources that are under the control of the enterprise.
@@ -97,19 +102,19 @@ class IncrementEvent(Model.Entity):
     # ISBN-10 3-540-30154-2 Springer Berlin Heidelberg New York
     # ISBN-13 978-3-540-30154-7 Springer Berlin Heidelberg New York
     """
-    id = Integer(primary_key=True, foreign_key=Model.Entity.use('id'))
+    id = Integer(primary_key=True, foreign_key=Model.REA.Entity.use('id'))
 
-    provider = Many2One(label="Agent provider", model=Model.Agent, nullable=False)
+    provider = Many2One(label="Agent provider", model=Model.REA.Agent, nullable=False)
 
-    resource = Many2One(label='Resource Inflow', model=Model.Resource, nullable=False)
+    resource = Many2One(label='Resource Inflow', model=Model.REA.Resource, nullable=False)
 
     value = Decimal(label="increment value", default=decimalType(0))
 
     date = DateTime(label="Event Date", default=lambda **kwargs: datetime.now())
 
 
-@register(Model)
-class DecrementEvent(Model.Entity):
+@register(Model.REA)
+class DecrementEvent(Model.REA.Entity):
     """
     Economic Event represents either an increment or a decrement in the
     value of economic resources that are under the control of the enterprise.
@@ -123,11 +128,11 @@ class DecrementEvent(Model.Entity):
     # ISBN-13 978-3-540-30154-7 Springer Berlin Heidelberg New York
     """
 
-    id = Integer(primary_key=True, foreign_key=Model.Entity.use('id'))
+    id = Integer(primary_key=True, foreign_key=Model.REA.Entity.use('id'))
 
-    recipient = Many2One(label="Agent recipient", model=Model.Agent, nullable=False)
+    recipient = Many2One(label="Agent recipient", model=Model.REA.Agent, nullable=False)
 
-    resource = Many2One(label='Resource Outflow', model=Model.Resource, nullable=False)
+    resource = Many2One(label='Resource Outflow', model=Model.REA.Resource, nullable=False)
 
     value = Decimal(label="decrement value", default=decimalType(0))
 
