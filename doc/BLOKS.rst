@@ -23,5 +23,16 @@ Blok rea
 
 .. include:: ../anyblok_rea/rea/README.rst
 .. include:: ../anyblok_rea/rea/CODE.rst
+
+Blok rea commitment
+-------------------
+
+.. automodule:: anyblok_rea.rea_commitment
+.. autoclass:: REACommitmentBlok
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    :noindex:
+
 .. include:: ../anyblok_rea/rea_commitment/README.rst
 .. include:: ../anyblok_rea/rea_commitment/CODE.rst
