@@ -14,7 +14,7 @@ Bloks
 Blok rea
 --------
 
-.. automodule:: anyblok_rea.rea
+.. automodule:: anyblok_rea.bloks.rea
 .. autoclass:: REABlok
     :members:
     :undoc-members:
@@ -27,7 +27,7 @@ Blok rea
 Blok rea commitment
 -------------------
 
-.. automodule:: anyblok_rea.rea_commitment
+.. automodule:: anyblok_rea.bloks.rea_commitment
 .. autoclass:: REACommitmentBlok
     :members:
     :undoc-members:
