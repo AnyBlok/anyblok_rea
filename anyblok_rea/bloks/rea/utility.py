@@ -21,11 +21,11 @@ class Utility:
 
     @classmethod
     def create_resource(cls):
-        return cls.registry.Resource.insert()
+        return cls.registry.REA.Resource.insert()
 
     @classmethod
     def create_agent(cls):
-        return cls.registry.Agent.insert()
+        return cls.registry.REA.Agent.insert()
 
     @classmethod
     def get_resource_value(cls, resource, agent):
@@ -54,8 +54,8 @@ class Utility:
 
     @classmethod
     def create_decrement_event(cls, agent, resource):
-        return cls.registry.DecrementEvent.insert(recipient=agent, resource=resource)
+        return cls.registry.REA.DecrementEvent.insert(recipient=agent, resource=resource)
 
     @classmethod
     def create_increment_event(cls, agent, resource):
-        return cls.registry.IncrementEvent.insert(provider=agent, resource=resource)
+        return cls.registry.REA.IncrementEvent.insert(provider=agent, resource=resource)
