@@ -35,8 +35,8 @@ class Utility:
         :param resource: What resource is used to compute resource value
         :return: value
         """
-        decrement_event = cls.registry.DecrementEvent
-        increment_event = cls.registry.IncrementEvent
+        decrement_event = cls.registry.REA.DecrementEvent
+        increment_event = cls.registry.REA.IncrementEvent
 
         value_incre = increment_event.query(func.sum(increment_event.value).label('total_value')).\
             filter(increment_event.provider == agent).\

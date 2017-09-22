@@ -15,10 +15,27 @@ Model = Declarations.Model
 
 @register(Model)
 class Utility:
-    @classmethod
-    def create_decrement_commitment(cls, agent, resource):
-        return cls.registry.REA.DecrementCommitment.insert(recipient=agent, resource=resource)
 
     @classmethod
-    def create_increment_commitment(cls, agent, resource):
-        return cls.registry.REA.IncrementCommitment.insert(provider=agent, resource=resource)
+    def create_contract(cls):
+        return cls.registry.REA.Contract.insert()
+
+    @classmethod
+    def get_provider_contract(cls, agent):
+        """
+        :param agent: Economic Agent
+        :return: SA Collections of contract where the agent is provider
+        """
+        return cls.registry.REA.Contract.query().join(
+            cls.registry.REA.Contract.commitments_increment_ids).filter(
+                cls.registry.REA.IncrementCommitment.provider == agent).all()
+
+    @classmethod
+    def get_receiver_contract(cls, agent):
+        """
+        :param agent: Economic Agent
+        :return: SA Collections of contract where the agent is receiver
+        """
+        return cls.registry.REA.Contract.query().join(
+            cls.registry.REA.Contract.commitments_decrement_ids).filter(
+                cls.registry.REA.DecrementCommitment.recipient == agent).all()
