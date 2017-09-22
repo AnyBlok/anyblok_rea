@@ -14,8 +14,14 @@ class TestAgent(DBTestCase):
 
     blok_entry_points = ('bloks', 'test_bloks')
 
-    def test_install_test1(self):
+    def test_install_test1_create_customer(self):
         registry = self.init_registry(None)
         registry.upgrade(install=('rea_test_1',))
         customer = registry.Agent.Customer.insert(name="My customer")
         self.assertIs(customer, registry.Entity.query().one())
+
+    def test_install_test1_create_pizza(self):
+        registry = self.init_registry(None)
+        registry.upgrade(install=('rea_test_1',))
+        pizza = registry.Resource.Pizza.insert(name="4 fromages")
+        self.assertIs(pizza, registry.Entity.query().one())
