@@ -10,8 +10,6 @@
 API doc
 ~~~~~~~
 
-**Commitment entity**
-
 .. automodule:: anyblok_rea.bloks.rea_commitment.entity
 
 .. autoanyblok-declaration:: IncrementCommitment

@@ -10,8 +10,6 @@
 API doc
 ~~~~~~~
 
-**Base entity**
-
 .. automodule:: anyblok_rea.bloks.rea.entity
 
 .. autoanyblok-declaration:: Entity
