@@ -45,3 +45,10 @@ API doc
     :members:
     :show-inheritance:
     :noindex:
+
+.. automodule:: anyblok_rea.rea.exceptions
+
+.. autoanyblok-declaration:: REABlokException
+    :members:
+    :show-inheritance:
+    :noindex:
